@@ -1,7 +1,7 @@
 My Transactional Key Value Store(MyTxKv)
 ======
 
-# How To Compile Run 
+# How To Compile and Run 
 
 `./gradlew clean installDist && ./build/install/mytxkv/bin/mytxkv 
 `
