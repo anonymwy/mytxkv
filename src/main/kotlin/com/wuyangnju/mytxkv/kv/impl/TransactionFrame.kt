@@ -1,5 +1,8 @@
 package com.wuyangnju.mytxkv.kv.impl
 
+/**
+ * A TransactionFrame contains all key-value data within a certain transaction.
+ */
 interface ITransactionFrame {
     fun set(key: String, value: String)
     fun get(key: String): String?

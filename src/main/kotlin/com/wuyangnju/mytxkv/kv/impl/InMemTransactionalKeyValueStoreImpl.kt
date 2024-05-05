@@ -2,6 +2,10 @@ package com.wuyangnju.mytxkv.kv.impl
 
 import com.wuyangnju.mytxkv.kv.ITransactionalKeyValueStore
 
+/**
+ *  InMemTransactionalKeyValueStoreImpl uses a stack of TransactionFrame to support nested transactions.
+ *  A List is used to mock stack, where list.add() equals stack-push and list.removeLast() equals stack-pop.
+ */
 class InMemTransactionalKeyValueStoreImpl : ITransactionalKeyValueStore {
     private val txStack = mutableListOf(createInMemTransactionFrame())
 

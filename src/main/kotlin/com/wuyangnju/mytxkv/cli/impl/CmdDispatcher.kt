@@ -10,6 +10,10 @@ import com.wuyangnju.mytxkv.cli.impl.cmdhandler.RollbackCmdHandler
 import com.wuyangnju.mytxkv.cli.impl.cmdhandler.SetCmdHandler
 import com.wuyangnju.mytxkv.kv.ITransactionalKeyValueStore
 
+/**
+ * CmdDispatcher finds the corresponding CmdHandler via iteratively calling CmdHandler.matches(args),
+ * or returns null if no CmdHandler matches.
+ */
 interface ICmdDispatcher {
     fun dispatch(args: List<String>): ICmdHandler?
 }

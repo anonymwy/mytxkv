@@ -3,6 +3,12 @@ package com.wuyangnju.mytxkv.cli.impl
 import com.wuyangnju.mytxkv.cli.ICli
 import com.wuyangnju.mytxkv.kv.ITransactionalKeyValueStore
 
+/**
+ * InteractiveCli will parse user input string into args: List<String>,
+ * find the corresponding CmdHandler via CmdDispatcher,
+ * then do the following validation, alert-showing and processing,
+ * and finally print the output and wait for new user command.
+ */
 class InteractiveCliImpl(txkv: ITransactionalKeyValueStore): ICli {
     companion object {
         val SPACE_PATTERN = "\\s+".toRegex()
